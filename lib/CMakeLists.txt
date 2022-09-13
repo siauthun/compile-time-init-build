@@ -4,6 +4,7 @@ project(compile_time_init_build)
 add_library(external_lib INTERFACE IMPORTED GLOBAL)
 
 add_subdirectory(Catch2)
+add_subdirectory(fmt)
 
 target_link_libraries(external_lib INTERFACE Catch2::Catch2WithMain cib)
 
