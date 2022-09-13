@@ -116,6 +116,9 @@ jobs:
       - name: install compiler
         run: ${{ matrix.compiler.install }}
 
+      - name: Update git submodule
+        run: git submodule update --recursive
+
       - name: Configure CMake
         env:
           CC: ${{ matrix.compiler.cc }}
