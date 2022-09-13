@@ -14,5 +14,5 @@ target_include_directories(external_lib SYSTEM INTERFACE ${CMAKE_CURRENT_SOURCE_
 target_include_directories(external_lib SYSTEM INTERFACE ${CMAKE_SOURCE_DIR}/include/)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/lib/Catch2/extras)
-include(CTest)
+# include(CTest)
 include(Catch)
