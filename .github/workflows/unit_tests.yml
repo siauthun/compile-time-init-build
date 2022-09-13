@@ -120,7 +120,9 @@ jobs:
         run: ${{ matrix.compiler.install }}
 
       - name: Update git submodule
-        run: git submodule update --recursive
+        run: echo "Hello! starting to run git submodule update "
+             git submodule update --init --recursive
+             echo "Done runnign git submodule update"
 
       - name: Configure CMake
         env:
