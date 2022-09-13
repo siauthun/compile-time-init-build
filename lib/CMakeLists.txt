@@ -12,3 +12,7 @@ target_link_libraries(external_lib INTERFACE fmt::fmt)
 # ensure catch2 headers do not produce warnings
 target_include_directories(external_lib SYSTEM INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Catch2/src/)
 target_include_directories(external_lib SYSTEM INTERFACE ${CMAKE_SOURCE_DIR}/include/)
+
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/lib/Catch2/extras)
+include(CTest)
+include(Catch)
